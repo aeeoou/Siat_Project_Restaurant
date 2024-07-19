@@ -1,6 +1,7 @@
 import Header from '../Header'
 import Footer from '../Footer'
 import {Container} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 {/* ADVERTISEMENT.01 광고목록조회 */}
 const AdListInquiry = ({children}) => {
@@ -14,12 +15,12 @@ const AdListInquiry = ({children}) => {
                             <div className='text-center text-danger'>...상단bar...</div>
                             <br/>
                             <div className='border border-dark w-72 h-96 p-4'>
-                                {/* 페이지 이동은 href */}
-                                <a href='' className='d-block'>
+                                {/* 페이지 이동은 Link */}
+                                <Link to='/AdInquiry' className='d-block'>
                                     <div className='border h-96 mb-4 p-4 text-center'>
                                         식당이미지
                                     </div>
-                                </a>
+                                </Link>
                                 <div className='border h-96 mb-4 p-4 text-start'>
                                     식당명 : 삼원가든<br/>
                                     광고제목 : 가족과 외식하기 좋은, 비즈니스 다이닝에 좋은, 상견례에 좋은, 역사가 오래된, 외국인 접대에 좋은,
@@ -30,17 +31,19 @@ const AdListInquiry = ({children}) => {
                                     게시날짜 : 2024-07-19
                                 </div>
                                 <div className='d-flex justify-content-end'>
+                                    <Link to='/AdInquiry' className='d-block'>
                                     <a className='btn btn-primary btn-outline-warning mt-4 p-2 btn-sm' href='#' role='button' style={{ background: 'orange' }}> 자세히 </a>
+                                    </Link>
                                 </div>
                             </div>
                             <hr/>
                             <div className='border border-dark w-72 h-96 p-4'>
-                                {/* 페이지 이동은 href */}
-                                <a href='' className='d-block'>
+                                {/* 페이지 이동은 Link */}
+                                <Link to='/AdInquiry' className='d-block'>
                                     <div className='border h-96 mb-4 p-4 text-center'>
                                         식당이미지
                                     </div>
-                                </a>
+                                </Link>
                                 <div className='border h-96 mb-4 p-4 text-start'>
                                     식당명 : 레스쁘아<br/>
                                     광고제목 : L'Espoir du Hibou, 서울 2024 선정!!<br/>
@@ -52,10 +55,12 @@ const AdListInquiry = ({children}) => {
                                     게시날짜 : 2024-07-19
                                 </div>
                                 <div className='d-flex justify-content-end'>
-                                    <a className='btn btn-primary btn-outline-warning mt-4 p-2 btn-sm' href='#' role='button' style={{ background: 'orange' }}> 자세히 </a>
+                                    <Link to='/AdInquiry' className='d-block'>
+                                        <a className='btn btn-primary btn-outline-warning mt-4 p-2 btn-sm' href='#' role='button' style={{ background: 'orange' }}> 자세히 </a>
+                                    </Link>
                                 </div>
                             </div>
-                            {/* 부트스트랩 페이지네이션 */}
+                            {/* 부트스트랩 페이지네이션 (비동기처리 해야함)*/}
                             <nav aria-label="Page navigation example" className='d-flex justify-content-center p-4'>
                                 <ul class="pagination">
                                     <li class="page-item">
