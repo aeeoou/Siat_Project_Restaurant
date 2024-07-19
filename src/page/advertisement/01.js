@@ -56,7 +56,7 @@ const AdListInquiry = ({children}) => {
                                 </div>
                                 <div className='d-flex justify-content-end'>
                                     <Link to='/AdInquiry' className='d-block'>
-                                        <a className='btn btn-primary btn-outline-warning mt-4 p-2 btn-sm' href='#' role='button' style={{ background: 'orange' }}> 자세히 </a>
+                                        <a className='btn btn-primary btn-outline-warning mt-4 p-2 btn-sm' href='#' role='button' style={{ background: 'orange' }}>자세히</a>
                                     </Link>
                                 </div>
                             </div>

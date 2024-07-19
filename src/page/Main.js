@@ -1,5 +1,6 @@
 import {Row, Col} from 'react-bootstrap'
 import UserLayout from './UserLayout';
+import { Link } from 'react-router-dom'
 
 const Main = () => {
     return (
@@ -12,9 +13,11 @@ const Main = () => {
                         </div>
                     </Row>
                     <Row>
-                        <div className='advertisementImg mt-2'>
-                            광고이미지
-                        </div>
+                        <Link to='/AdListInquiry' className='d-block'>
+                            <div className='advertisementImg mt-2'>
+                                광고이미지
+                            </div>
+                        </Link>
                     </Row>
                 </Col>
             </Row>
