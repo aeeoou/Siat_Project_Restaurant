@@ -1,0 +1,75 @@
+#Container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 0.5rem;
+}
+
+#header {
+    height: 120px;
+    background-color: skyblue;
+}
+
+#footer {
+    height: 120px;
+    background-color: skyblue;
+}
+
+#footerIconShop, #footerIconPersonCircle, #footerIconHouseFill {
+    font-size: 5rem;
+}
+
+.foodImg, .advertisementImg {
+    width: 100%;
+    height: 100%;
+    border: .01rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: white;
+}
+
+.foodImg {
+    height: 30vh;
+}
+
+.advertisementImg {
+    height: 51.8vh;
+}
+
+
+.btn {
+    background-color: orange;
+    color: black;
+}
+
+.loginText {
+    margin-right: 10.5rem;
+    font-size: 2rem;
+}
+
+#loginContainer {
+    width: 500px;
+    margin-top: 9rem;
+}
+
+#login {
+    font-size: 1rem;
+    color:black;
+}
+
+
+
+
+.logo_img {
+    width: 6rem;
+    height: 6rem;
+    line-height: 2.5rem;
+    margin-top: .6rem;
+    border: 0.1rem solid black;
+    margin-left: 11rem; 
+}
+
