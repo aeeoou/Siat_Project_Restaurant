@@ -8,12 +8,13 @@
 
 #header {
     height: 120px;
-    background-color: skyblue;
+    background-color: coral;
 }
 
 #footer {
     height: 120px;
-    background-color: skyblue;
+    margin-top: auto;
+    background-color: coral;
 }
 
 #footerIconShop, #footerIconPersonCircle, #footerIconHouseFill {

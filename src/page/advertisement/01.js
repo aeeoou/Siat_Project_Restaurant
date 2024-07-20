@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom'
 
 {/* ADVERTISEMENT.01 광고목록조회 */}
 const AdListInquiry = ({children}) => {
+    const pageName = '광고목록조회'
+    const btnName = ''
+    const btnWidth = 0
+    const btnTitle = ''
+    const modalBodyt = ''
+    const completeBtn = ''
+
     return (
         <>
             <Container id='Container' className='border border-dark'>
