@@ -11,7 +11,7 @@ const EditAd = ({children}) => {
                 {/* ADMIN header로 변경하기 */}
                 <Header/>
                     <div>
-                        <main>
+                        <main className='px-4'>
                             {children}
                             <div className='text-center text-danger'>...상단bar...</div>
                             <br/>
@@ -21,22 +21,28 @@ const EditAd = ({children}) => {
                                         class="form-control"
                                         placeholder="식당명을 입력하세요."
                                         aria-label="Recipient's username"
-                                        aria-describedby="button-addon2">
+                                        aria-describedby="button-addon2"
+                                        style={{ width: '300px' }}>
                                 </input>
                             </div>
                                 <div>2024-07-19 23:59:59</div>
                             </div>
                             <hr/>
-                            <div className='border mb-4 p-4 text-center' style={{ height: '150px' }}>
+                            <div className='my-3 border d-flex align-items-center justify-content-center' style={{ height: '300px' }}>
                                 식당이미지
                             </div>
                             <div class="input-group">
                                 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
                                 <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04">Button</button>
                             </div>
-                            <div className='border mt-3' style={{ height: '150px' }}>
-                                광고글을 작성하세요.
-                            </div>             
+                                <input 
+                                className='mt-3 border d-flex align-items-center justify-content-center'
+                                type="text"
+                                       class="form-control"
+                                       id="exampleInputPassword1"
+                                       placeholder='광고글을 작성하세요.'
+                                       style={{ width: '425px', height: '150px' }}>
+                                </input>       
                             <div className='p-1 mt-1'>
                                 저작권자 씨앗미디어(주) 무단전재 및 재배포 금지
                             </div>

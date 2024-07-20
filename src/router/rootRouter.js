@@ -1,5 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import {Suspense} from 'react';
+import NavOffcanvas from '../page/navigator/01'
 import Main from '../page/Main';
 
 import Login from '../page/user/01';
@@ -26,6 +27,11 @@ const rootRouter = createBrowserRouter([
     {
         path: '/',
         element: <Suspense><Main/></Suspense>
+    },
+    {/* NAVIGATOR */},
+    {
+        path: '/navOffcanvas',
+        element: <Suspense><NavOffcanvas/></Suspense>
     },
     {/* USER */},
     {

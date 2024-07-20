@@ -19,46 +19,50 @@ const AddAd = ({children}) => {
                 {/* ADMIN header로 변경하기 */}
                 <Header/>
                     <div>
-                        <main>
+                        <main className='px-4'>
                             {children}
                             <div className='text-center text-danger'>...상단bar...</div>
                             <br/>
                             <div classNamme='text-start'>
-                            <div class="mb-2">
-                                <input type="text"
-                                        class="form-control"
-                                        placeholder="식당명을 입력하세요."
-                                        aria-label="Recipient's username"
-                                        aria-describedby="button-addon2">
-                                </input>
-                            </div>
+                                <div class="mb-2">
+                                    <input type="text"
+                                            class="form-control"
+                                            placeholder="식당명을 입력하세요."
+                                            aria-label="Recipient's username"
+                                            aria-describedby="button-addon2"
+                                            style={{ width: '300px' }}>
+                                    </input>
+                                </div>
                                 <div>2024-07-19 23:59:59</div>
                             </div>
                             <hr/>
-                            <div className='border mb-4 p-4 text-center' style={{ height: '150px' }}>
+                            <div className='border d-flex align-items-center justify-content-center' style={{ height: '300px' }}>
                                 식당이미지
                             </div>
-                            <div class="input-group">
-                                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04">Button</button>
+                            <div class="my-3 input-group">
+                                <input type="file"
+                                       class="form-control"
+                                       id="inputGroupFile04"
+                                       aria-describedby="inputGroupFileAddon04"
+                                       aria-label="Upload"></input>
+                                <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04">등록</button>
                             </div>
-                            <div className='border mt-3' style={{ height: '150px' }}>
-                                광고글을 작성하세요.
-                            </div>             
+                            <input className='mt-3 border d-flex align-items-center justify-content-center'
+                                   type="text"
+                                   class="form-control"
+                                   id="exampleInputPassword1"
+                                   placeholder='광고글을 작성하세요.'
+                                   style={{ width: '425px', height: '150px' }}>
+                            </input>            
                             <div className='p-1 mt-1'>
                                 이 게시물은 (주)맛있당에 관리 권한이 있음.
                             </div>
                             <div className='d-flex justify-content-center'>
-                                <Button
-                                    className='btn btn-primary btn-outline-warning mx-1 my-5 p-2 btn-sm'
-                                    onClick={handleShow}
-                                    style={{ background: 'orange' }}
-                                >
-                                    등록
-                                </Button>
                                 <Link to='/AdminAdList' className='d-block'>
-                                    <a className='btn btn-primary btn-outline-warning mx-1 my-5 p-2 btn-sm' onClick={handleShow} style={{ background: 'orange' }}>등록</a>
-                                    <a className='btn btn-primary btn-outline-warning mx-1 my-5 p-2 btn-sm' onClick={handleShow} style={{ background: 'orange' }}>취소</a>
+                                    <a className='btn btn-primary btn-outline-warning mx-1 my-5 p-2 btn-sm'
+                                       onClick={handleShow}>등록</a>
+                                    <a className='btn btn-primary btn-outline-warning mx-1 my-5 p-2 btn-sm'
+                                       onClick={handleShow}>취소</a>
                                 </Link>
                             </div>
                         </main>

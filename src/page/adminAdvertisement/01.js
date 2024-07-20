@@ -11,12 +11,13 @@ const AdminAdList = ({children}) => {
                 {/* ADMIN header로 변경하자 */}
                 <Header/>
                     <div>
-                        <main>
+                        <main className='px-4'>
                             {children}
                             <div className='text-center text-danger'>...상단bar...</div>
                             <br/>
                             <div className='text-start fw-bold' style={{ fontSize: '20px' }}> 광고목록 </div>
                             <div className='pt-3'>
+                                {/* 행 클릭 시 03광고수정으로 이동 구현 */}
                                 <table className="table table-hover text-center">
                                     <thead className='table-primary'>
                                         <tr>

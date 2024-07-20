@@ -16,7 +16,7 @@ const Header = () => {
                         <Justify className='float-end ms-3 fs-1 text-dark'/>
                     </Link>
                     <Link to={'/login'}>
-                        <Button className='float-end' id='login'>로그인</Button>
+                        <Button className='float-end btn-outline-warning' id='login'>로그인</Button>
                     </Link>  
                 </Col>
             </Row>
