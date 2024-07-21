@@ -51,7 +51,7 @@ const Login = () => {
             </Row>
             <Row className='gap-3 mx-2 mb-5'>
                 <Button variant='warning' size='lg' className='loginBtn mt-5 border border-dark' href='/'>로그인</Button>{' '}
-                <Button variant='warning' size='lg' className='loginUpBtn border border-dark btn'>회원가입</Button>{' '}
+                <Button variant='warning' size='lg' className='loginUpBtn border border-dark btn' href='/'>회원가입</Button>{' '}
             </Row>
         </Container>
     )

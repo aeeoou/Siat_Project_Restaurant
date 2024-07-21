@@ -23,6 +23,9 @@ import AddAd from '../page/adminAdvertisement/02';
 import EditAd from '../page/adminAdvertisement/03';
 import CompleteAdDelete from '../page/adminAdvertisement/04';
 
+import AnswerListInq from '../page/adminInquiry/01';
+import CompleteInqDelete from '../page/adminInquiry/04';
+
 const rootRouter = createBrowserRouter([
     {
         path: '/',
@@ -101,6 +104,15 @@ const rootRouter = createBrowserRouter([
         path: '/completeAdDelete',
         element: <Suspense><CompleteAdDelete/></Suspense>
     },
+    {/* ADMIN.Inquiry */},
+    {
+        path: '/answerListInq',
+        element: <Suspense><AnswerListInq/></Suspense>
+    },
+    {
+        path: '/completeInqDelete',
+        element: <Suspense><CompleteInqDelete/></Suspense>
+    }
 ])
 
 export default rootRouter

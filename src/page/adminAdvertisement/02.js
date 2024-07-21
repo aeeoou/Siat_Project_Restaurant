@@ -53,7 +53,7 @@ const AddAd = ({children}) => {
                                    id="exampleInputPassword1"
                                    placeholder='광고글을 작성하세요.'
                                    style={{ width: '425px', height: '150px' }}>
-                            </input>            
+                            </input>           
                             <div className='p-1 mt-1'>
                                 이 게시물은 (주)맛있당에 관리 권한이 있음.
                             </div>

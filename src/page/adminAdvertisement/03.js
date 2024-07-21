@@ -35,14 +35,13 @@ const EditAd = ({children}) => {
                                 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
                                 <button class="btn btn-outline-warning" type="button" id="inputGroupFileAddon04">Button</button>
                             </div>
-                                <input 
-                                className='mt-3 border d-flex align-items-center justify-content-center'
-                                type="text"
-                                       class="form-control"
-                                       id="exampleInputPassword1"
-                                       placeholder='광고글을 작성하세요.'
-                                       style={{ width: '425px', height: '150px' }}>
-                                </input>       
+                            <input className='mt-3 border d-flex align-items-center justify-content-center'
+                                   type="text"
+                                   class="form-control"
+                                   id="exampleInputPassword1"
+                                   placeholder='광고글을 작성하세요.'
+                                   style={{ width: '425px', height: '150px' }}>
+                            </input>       
                             <div className='p-1 mt-1'>
                                 저작권자 씨앗미디어(주) 무단전재 및 재배포 금지
                             </div>
