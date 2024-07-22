@@ -1,107 +1,99 @@
-import Header from '../Header'
-import Footer from '../Footer'
-import {Container} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import AdminLayout from '../AdminLayout';
+import { Link } from 'react-router-dom';
+import { Button, Form, InputGroup } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
 
-{/* ADMIN.ADVERTISEMENT.01 광고목록 */}
-const AdminAdList = ({children}) => {
+const AdminAdList = () => {
+    const advertisements = [
+        { id: 1, restaurantName: '레스쁘아', writtenDate: '2024-01-01' },
+        { id: 2, restaurantName: '삼원가든', writtenDate: '2024-02-02' },
+        { id: 3, restaurantName: '김삼보', writtenDate: '2024-03-03' },
+        { id: 4, restaurantName: '시골밥상', writtenDate: '2024-04-04' },
+        { id: 5, restaurantName: '충무커리', writtenDate: '2024-05-05' }
+    ];
+
     return (
         <>
-            <Container id='Container' className='border border-dark'>
-                {/* ADMIN header로 변경하자 */}
-                <Header/>
-                    <div>
-                        <main className='px-4'>
-                            {children}
-                            <div className='text-center text-danger'>...상단bar...</div>
-                            <br/>
-                            <div className='text-start fw-bold' style={{ fontSize: '20px' }}> 광고목록 </div>
-                            <div className='pt-3'>
-                                {/* 행 클릭 시 03광고수정으로 이동 구현 */}
-                                <table className="table table-hover text-center">
-                                    <thead className='table-primary'>
-                                        <tr>
-                                            <th scope="col">식별번호</th>
-                                            <th scope="col">식당명</th>
-                                            <th scope="col">작성일</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>레스쁘아</td>
-                                            <td>2024-01-01</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>삼원가든</td>
-                                            <td>2024-02-02</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>김삼보</td>
-                                            <td>2024-03-03</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>시골밥상</td>
-                                            <td>2024-04-04</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>충무커리</td>
-                                            <td>2024-05-05</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            {/* 부트스트랩 페이지네이션 (비동기처리 해야함)*/}
-                            <nav aria-label="Page navigation example" className='d-flex justify-content-center p-4'>
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div className='d-flex justify-content-center'>
-                                <div class="input-group mb-5" style={{ width: '70%' }}>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>선택</option>
-                                        <option value="1">식별번호</option>
-                                        <option value="2">식당명</option>
-                                        <option value="3">작성일</option>
-                                    </select>
-                                    <input type="text" class="form-control" placeholder="검색명을 입력하세요." aria-label="Recipient's username" aria-describedby="button-addon2"></input>
-                                    <button class="btn btn-outline-warning" type="button" id="button-addon2">검색</button>
-                                </div>
-                            </div>
-                            <div className='d-flex justify-content-end mb-5'>
-                                <Link to='/AddAd' className='d-block'>
-                                    <a className='btn btn-primary btn-outline-warning p-2 btn-sm'
-                                       href='#'
-                                       role='button'
-                                       style={{ background: 'orange' }}>광고 작성</a>
-                                </Link>
-                            </div>
-                        </main>
+            <AdminLayout>
+                <div className='me-4 ms-2'>
+                    <div className='text-start fw-bold' style={{ fontSize: '20px' }}> 광고목록 </div>
+                    <div className='pt-3'>
+                        <table className="table table-hover text-start shadow-table">
+                            <thead className='table-Warning'>
+                                <tr>
+                                    <th scope="col">식별번호</th>
+                                    <th scope="col">식당명</th>
+                                    <th scope="col">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {advertisements.map((advertisement) => (
+                                    <tr key={advertisement.id}>
+                                        <th scope='row'>
+                                            <Link to={`/adminAdvertisementUpdate/${advertisement.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                {advertisement.id}
+                                            </Link>
+                                        </th>
+                                        <td>
+                                            <Link to={`/adminAdvertisementUpdate/${advertisement.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                {advertisement.restaurantName}
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            <Link to={`/adminAdvertisementUpdate/${advertisement.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                {advertisement.writtenDate}
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
-                {/* ADMIN footer로 변경하자 */}
-                <Footer/>
-            </Container>
+                    {/* 페이지네이션 */}
+                    <nav aria-label="Page navigation example" className='d-flex justify-content-center'>
+                        <ul className="pagination" id='paging'>
+                            <li className="page-item" id='paging'>
+                                <a className="page-link" aria-label="Previous" id='paging'>
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li className="page-item"><a className="page-link" id='paging'>1</a></li>
+                            <li className="page-item"><a className="page-link" id='paging'>2</a></li>
+                            <li className="page-item"><a className="page-link" id='paging'>3</a></li>
+                            <li className="page-item"><a className="page-link" id='paging'>4</a></li>
+                            <li className="page-item"><a className="page-link" id='paging'>5</a></li>
+                            <li className="page-item">
+                                <a className="page-link" aria-label="Next" id='paging'>
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    {/* 셀렉트 */}
+                    <div className='searchContainer d-flex search-container'>
+                        <Form.Select className="searchSelect me-2">
+                            <option>선택</option>
+                            <option>식별번호</option>
+                            <option>식당명</option>
+                        </Form.Select>
+                        <InputGroup>
+                            <Form.Control type="text" placeholder="검색어를 입력하세요" />
+                            <Button variant="outline-warning">
+                                <FaSearch />
+                            </Button>
+                        </InputGroup>
+                    </div>
+                    <div className='d-flex justify-content-end'>
+                        <Link to='/AddAd' className='d-block'>
+                            <a className='btn btn-warning btn-outline-warning p-2 btn-sm fw-bold'
+                                role='button'
+                                style={{ background: 'orange', color: 'white' }}>광고 작성</a>
+                        </Link>
+                    </div>
+                </div>
+            </AdminLayout>
         </>
-    )
-}
+    );
+};
 
-export default AdminAdList
+export default AdminAdList;

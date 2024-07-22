@@ -41,7 +41,7 @@ const AnswerListInq = ({children}) => {
                                         <td colSpan="4" className="text-start" style={{ paddingBottom: '30px' }}>
                                             RE: 관리자가 답변했습니다.
                                             {/* 부트스트랩 아이콘 모양으로 바꿔야 합니다. */}
-                                            <Link to="/" className="btn btn-primary btn-sm ms-3">
+                                            <Link to="/AdminAnswerCreate" className="btn btn-primary btn-sm ms-3">
                                                 <i class="bi bi-chevron-right">화살표</i>
                                             </Link>
                                         </td>
@@ -56,7 +56,7 @@ const AnswerListInq = ({children}) => {
                                         <td colSpan="4" className="text-start" style={{ paddingBottom: '30px' }}>
                                             RE: 관리자가 답변했습니다.
                                             {/* 부트스트랩 아이콘 모양으로 바꿔야 합니다. */}
-                                            <Link to="/" className="btn btn-primary btn-sm ms-3">
+                                            <Link to="/AdminAnswerCreate" className="btn btn-primary btn-sm ms-3">
                                                 <i class="bi bi-chevron-right">화살표</i>
                                             </Link>
                                         </td>
@@ -71,7 +71,7 @@ const AnswerListInq = ({children}) => {
                                         <td colSpan="4" className="text-start" style={{ paddingBottom: '30px' }}>
                                             RE: 관리자가 답변했습니다.
                                             {/* 부트스트랩 아이콘 모양으로 바꿔야 합니다. */}
-                                            <Link to="/" className="btn btn-primary btn-sm ms-3">
+                                            <Link to="/AdminAnswerCreate" className="btn btn-primary btn-sm ms-3">
                                                 <i class="bi bi-chevron-right">화살표</i>
                                             </Link>
                                         </td>
@@ -86,7 +86,7 @@ const AnswerListInq = ({children}) => {
                                         <td colSpan="4" className="text-start" style={{ paddingBottom: '30px' }}>
                                             RE: 관리자가 답변했습니다.
                                             {/* 부트스트랩 아이콘 모양으로 바꿔야 합니다. */}
-                                            <Link to="/" className="btn btn-primary btn-sm ms-3">
+                                            <Link to="/AdminAnswerCreate" className="btn btn-primary btn-sm ms-3">
                                                 <i class="bi bi-chevron-right">화살표</i>
                                             </Link>
                                         </td>

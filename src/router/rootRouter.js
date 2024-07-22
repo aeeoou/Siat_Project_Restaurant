@@ -20,10 +20,13 @@ import AdInquiry from '../page/advertisement/02';
 
 import AdminAdList from '../page/adminAdvertisement/01';
 import AddAd from '../page/adminAdvertisement/02';
-import EditAd from '../page/adminAdvertisement/03';
+import AdminAdvertisementUpdate from '../page/adminAdvertisement/03';
 import CompleteAdDelete from '../page/adminAdvertisement/04';
+import DeleteAdBtn from '../page/adminAdvertisement/DelAdBtn';
 
 import AnswerListInq from '../page/adminInquiry/01';
+import AdminAnswerCreate from '../page/adminInquiry/02';
+import FixAnswer from '../page/adminInquiry/03';
 import CompleteInqDelete from '../page/adminInquiry/04';
 
 const rootRouter = createBrowserRouter([
@@ -97,17 +100,29 @@ const rootRouter = createBrowserRouter([
         element: <Suspense><AddAd/></Suspense>
     },
     {
-        path: '/editAd',
-        element: <Suspense><EditAd/></Suspense>
+        path: '/adminAdvertisementUpdate',
+        element: <Suspense><AdminAdvertisementUpdate/></Suspense>
     },
     {
         path: '/completeAdDelete',
         element: <Suspense><CompleteAdDelete/></Suspense>
     },
+    {
+        path: '/deleteAdBtn',
+        element: <Suspense><DeleteAdBtn/></Suspense>
+    },
     {/* ADMIN.Inquiry */},
     {
         path: '/answerListInq',
         element: <Suspense><AnswerListInq/></Suspense>
+    },
+    {
+        path: '/adminAnswerCreate',
+        element: <Suspense><AdminAnswerCreate/></Suspense>
+    },
+    {
+        path: '/fixAnswer',
+        element: <Suspense><FixAnswer/></Suspense>
     },
     {
         path: '/completeInqDelete',
